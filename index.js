@@ -55,7 +55,7 @@ async function createProductTable (tableName) {
         ],
         AttributeDefinitions: [       
             { AttributeName: "productId", AttributeType: "S" },
-            { AttributeName: "discount", AttributeType: "N" }  
+            { AttributeName: "effectivePercentReduction", AttributeType: "N" }  
         ],
         ProvisionedThroughput: {       
             ReadCapacityUnits: 5, 
@@ -65,7 +65,7 @@ async function createProductTable (tableName) {
                 IndexName: "discountIndex",
                 KeySchema: [
                     {
-                        AttributeName: "discount",
+                        AttributeName: "effectivePercentReduction",
                         KeyType: "HASH"
                     }
                 ],
