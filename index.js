@@ -58,8 +58,8 @@ async function createProductTable (tableName) {
             { AttributeName: "effectivePercentReduction", AttributeType: "N" }  
         ],
         ProvisionedThroughput: {       
-            ReadCapacityUnits: 5, 
-            WriteCapacityUnits: 5
+            ReadCapacityUnits: 20, 
+            WriteCapacityUnits: 20
            },
         GlobalSecondaryIndexes: [{
                 IndexName: "discountIndex",
@@ -73,8 +73,8 @@ async function createProductTable (tableName) {
                     ProjectionType: "ALL"
                 },
                 ProvisionedThroughput: {
-                    ReadCapacityUnits: 1,
-                    WriteCapacityUnits: 1
+                    ReadCapacityUnits: 20,
+                    WriteCapacityUnits: 20
                 }
             }]
     };
